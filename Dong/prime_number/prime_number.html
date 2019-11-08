@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // document.write(2 + '<br>');
+    list();
+    function isPrime(n) {
+        if (n < 2) {
+            return 0;
+        }
+        for (let i = 2; i < n; i++) {
+            if (n % i !== 0) {
+                return 1;
+            } else return 0;
+        }
+    }
+    function list() {
+        let i = 2;
+        let n, count = 0;
+        n = prompt('nhập số lượng số nguyên tố muốn in ra: ');
+        while (count <n) {
+            if (isPrime(i) === 1) {
+                document.write(i + '<br>');
+                count++;
+            }
+            i++;
+        }
+    }
+</script>
+</body>
+</html>
