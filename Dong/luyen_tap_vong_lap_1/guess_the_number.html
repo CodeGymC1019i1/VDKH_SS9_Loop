@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đoán Số</title>
+</head>
+<body>
+<button onclick="guessNumber()">Chơi</button>
+<script type="text/javascript">
+    function guessNumber() {
+        let min = parseInt(prompt('nhập vào giá trị nhỏ nhất của khoảng mà bạn muốn dự đoán'));
+        let max = parseInt(prompt('nhập vào giá trị lớn nhất của khoảng mà bạn muốn dự đoán'));
+        let number = Math.random()*max + min;
+        let guess = parseInt(prompt('nhập vào số mà bạn dự đoán'));
+
+        while (guess<number){
+            alert('số bạn dự đoán nhỏ hơn số máy chọn');
+            guess = parseInt(prompt('hãy nhập lại lựa chọn của bạn'));
+        }
+        while (guess > number){
+            alert('số bạn dự đoán lớn hơn số máy chọn');
+            guess = parseInt(prompt('hãy nhập lại lựa chọn của bạn'));
+        }
+        if (guess === number){
+            alert('chúc mừng bạn dự đoán đúng');
+        }
+    }
+</script>
+</body>
+</html>
