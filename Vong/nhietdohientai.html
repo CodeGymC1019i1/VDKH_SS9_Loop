@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nhập nhiệt độ hiện tại</title>
+</head>
+<body>
+<script type="text/javascript">
+    let temp = parseFloat(prompt('Nhập nhiệt độ hiện tại '));
+    while (temp < 20) {
+        alert('Nhiệt độ hiên tại quá thấp');
+        temp = prompt('Hãy nhập lại nhiệt độ tăng lên');
+    }
+    while (temp > 100){
+        alert('Nhiệt độ hiên tại quá cao');
+        temp = prompt('Hãy nhập lại nhiệt độ giảm xuông');
+    }
+    document.write('Nhiệt độ là: '+temp);
+
+
+</script>
+</body>
+</html>
